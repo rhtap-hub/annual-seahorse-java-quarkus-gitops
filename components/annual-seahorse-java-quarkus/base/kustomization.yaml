@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: annual-seahorse-java-quarkus
+  janus-idp.io/tekton: annual-seahorse-java-quarkus
+  backstage.io/kubernetes-id: annual-seahorse-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: annual-seahorse-java-quarkus
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
